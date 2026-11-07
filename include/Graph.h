@@ -20,6 +20,8 @@ public:
     int indexOf(const std::string& name) const;  // throws if unknown
     int vertexCount() const { return static_cast<int>(names.size()); }
 
+    void dfs();
+
 private:
     std::vector<std::string> names;              // index -> city
     std::unordered_map<std::string, int> index;  // city -> index

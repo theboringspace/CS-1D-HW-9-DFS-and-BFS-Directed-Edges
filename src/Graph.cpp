@@ -3,6 +3,11 @@
 #include <iostream>
 #include <stdexcept>
 
+void Graph::dfs()
+{
+    std::cout << "We are dfs'ing it gang.";
+}
+
 // Adds a city if it isn't already present; returns its index either way.
 int Graph::addVertex(const std::string& name)
 {

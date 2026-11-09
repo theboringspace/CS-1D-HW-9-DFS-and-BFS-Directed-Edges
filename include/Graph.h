@@ -4,6 +4,14 @@
 #include <vector>
 #include <string>
 
+/// Classification of an edge during a traversal.
+enum class EdgeLabel
+{
+    UNEXPLORED, ///< Not yet examined from either endpoint.
+    DISCOVERY,  ///< Led to an unvisited city; part of the BFS tree.
+    CROSS       ///< Connected to an already-visited city; not part of the tree.
+};
+
 struct Edge
 {
     int to;
